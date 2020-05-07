@@ -2,15 +2,15 @@
 This is the shiny application software that can visualise single-cell RNA-seq data. We aim to visualise scRNA-seq data derived from myelofibrosis patients and healthy donors (Psaila and Wang et al., Mol. Cell, 2020). 
 
 # Installation Requirement.
-1)shiny
-2) SingleCellExperiment
-3) Matrix
-4) matrixStats
-5) ggplot2
-6) gridExtra
-7) igraph
-8) ComplexHeatmap
-9) circlize
+1)shiny <p>
+2) SingleCellExperiment <p>
+3) Matrix <p>
+4) matrixStats <p>
+5) ggplot2 <p>
+6) gridExtra <p>
+7) igraph <p>
+8) ComplexHeatmap <p>
+9) circlize <p>
 10) DT
 
 # Important data.
@@ -21,7 +21,7 @@ After downloading, please extract the data and move the "Psaila_et_al_MolCell_20
 # How to run the App.
 In R, set up your current working directory and then :
 
-> library(shiny)
+> library(shiny) <p>
 > runApp()
 
 # Contact
