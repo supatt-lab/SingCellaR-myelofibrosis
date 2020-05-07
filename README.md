@@ -1,8 +1,8 @@
 # SingCellaR-myelofibrosis.
 This is the shiny application software that can visualise single-cell RNA-seq data. We aim to visualise scRNA-seq data derived from myelofibrosis patients and healthy donors (Psaila and Wang et al., Mol. Cell, 2020). 
 
-# Installation Requirement.
-1)shiny <p>
+# Installation requirement.
+1) shiny <p>
 2) SingleCellExperiment <p>
 3) Matrix <p>
 4) matrixStats <p>
@@ -19,7 +19,7 @@ The data can be downloaded from this URL : http://sara.molbiol.ox.ac.uk/public/s
 After downloading, please extract the data and move the "Psaila_et_al_MolCell_2020" into the main package folder!.
 
 # How to run the App.
-In R, set up your current working directory and then :
+In R, set up your current working directory to the main package folder and then :
 
 > library(shiny) <p>
 > runApp()
