@@ -78,11 +78,11 @@ shinyServer(function(input, output){
 			    my_obj<-project.obj()
 			    Sys.sleep(0.25)
 			    if(input$embedding.method=="umap"){
-			      g<-plot_umap_label_by_clusters(my_obj,show_method=c("louvain"))
+			      g<-plot_umap_label_by_clusters(my_obj,show_method=c("merged_louvain"))
 			      Sys.sleep(0.25)
 				  
 			    }else if(input$embedding.method=="fa2"){
-			      g<-plot_forceDirectedGraph_label_by_clusters(my_obj,show_method=c("louvain"))
+			      g<-plot_forceDirectedGraph_label_by_clusters(my_obj,show_method=c("merged_louvain"))
 			      Sys.sleep(0.25)
 			    }
 			  })
@@ -97,7 +97,7 @@ shinyServer(function(input, output){
 			  withProgress(message = 'Plotting...', value = 0.8, {
 			    my_obj<-project.obj()
 			    Sys.sleep(0.25)
-			    g<-plot_heatmap_for_marker_genes(my_obj,cluster.type=c("louvain"),n.TopGenes=input$top_genes)
+			    g<-plot_heatmap_for_marker_genes(my_obj,cluster.type=c("merged_louvain"),n.TopGenes=input$top_genes)
 			  })
 			  return(g)
 			})
@@ -110,7 +110,7 @@ shinyServer(function(input, output){
 			  withProgress(message = 'Loading genes ...', value = 0.8, {
 			    my_obj<-project.obj()
 			    Sys.sleep(0.25)
-			    clusters.ids<-names(my_obj@marker.genes$louvain)
+			    clusters.ids<-names(my_obj@marker.genes$merged_louvain)
 			    return(clusters.ids)	
 			    Sys.sleep(0.25)
 			  })
@@ -132,7 +132,7 @@ shinyServer(function(input, output){
 			get_cluster_info <- eventReactive(input$selected_cluster, {
 			  withProgress(message = 'Loading genes ...', value = 0.8, {
 			    Sys.sleep(0.25)
-			    clusters.info<-getMarkerGenesInfo(project.obj(),cluster.type=c("louvain"),cluster_id=input$My_cluster)
+			    clusters.info<-getMarkerGenesInfo(project.obj(),cluster.type=c("merged_louvain"),cluster_id=input$My_cluster)
 			    return(clusters.info)
 			    #return(isolate(input$My_cluster))
 			    Sys.sleep(0.25)
