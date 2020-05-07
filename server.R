@@ -8,7 +8,7 @@
 shinyServer(function(input, output){
 			##***Interface for loading projects*****
 			output$list_of_projects <- renderUI({
-						project.files<-list.files("Psaila_et_al_MolCell_2020")
+						project.files<-list.files("projects")
 						
 						if(length(project.files) > 0){
 							fluidRow(
