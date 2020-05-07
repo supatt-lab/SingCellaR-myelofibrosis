@@ -17,7 +17,7 @@ This is the shiny application software that can visualise single-cell RNA-seq da
 
 The data can be downloaded from this URL : http://sara.molbiol.ox.ac.uk/public/supatt/shared_data/projects.tar.gz <p>
 
-Please extract the data and move the folder "Psaila_et_al_MolCell_2020" into the main package folder!.
+Please extract the data and move the folder "projects" into the main package folder!.
 
 # How to run the App.
 In R, set up your current working directory to the main package folder and then :
