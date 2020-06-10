@@ -25,6 +25,9 @@ In R, set up your current working directory to the main package folder and then 
 > library(shiny) <p>
 > runApp()
 
+You would have to click "Load" button to load the R object into the software. The process of loading might take a bit of time depending on the capacity of the computer. 
+
+
 # Contact
 
 supat.thongjuea@imm.ox.ac.uk
